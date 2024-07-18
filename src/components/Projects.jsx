@@ -1,7 +1,7 @@
 import Banner from './Banner';
 import Footer from './Footer';
 
-export default function Main() {
+export default function Projects() {
     return (
         <div className='flex'>
             <Banner />
