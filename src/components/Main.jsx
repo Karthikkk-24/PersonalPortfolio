@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 
 export default function Main() {
     return (
-        <div>
+        <div className='flex'>
             <Navbar />
             <Banner />
             <Footer />
