@@ -1,12 +1,14 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import DownloadSVG from './DownloadSVG';
 import NavbarItem from './NavbarItem';
 
 export default function Navbar() {
-    const [activeItem, setActiveItem] = useState('Home');
+    const location = useLocation();
+    const [activeItem, setActiveItem] = useState(location.pathname);
 
-    const handleItemClick = (title) => {
-        setActiveItem(title);
+    const handleItemClick = (path) => {
+        setActiveItem(path);
     };
 
     return (
@@ -18,38 +20,38 @@ export default function Navbar() {
                 <div className="w-full flex flex-col items-center h-auto justify-center gap-3">
                     <NavbarItem 
                         title="Home" 
-                        active={activeItem === 'Home'} 
-                        onClick={() => handleItemClick('Home')} 
+                        active={activeItem === '/'} 
+                        onClick={() => handleItemClick('/')} 
                         link="/" 
                     />
                     <NavbarItem 
                         title="Projects" 
-                        active={activeItem === 'Projects'} 
-                        onClick={() => handleItemClick('Projects')} 
+                        active={activeItem === '/projects'} 
+                        onClick={() => handleItemClick('/projects')} 
                         link="/projects" 
                     />
                     <NavbarItem 
                         title="Social" 
-                        active={activeItem === 'Social'} 
-                        onClick={() => handleItemClick('Social')} 
+                        active={activeItem === '/socials'} 
+                        onClick={() => handleItemClick('/socials')} 
                         link="/socials" 
                     />
                     <NavbarItem 
                         title="Shop" 
-                        active={activeItem === 'Shop'} 
-                        onClick={() => handleItemClick('Shop')} 
+                        active={activeItem === '/shop'} 
+                        onClick={() => handleItemClick('/shop')} 
                         link="/shop" 
                     />
                     <NavbarItem 
                         title="About" 
-                        active={activeItem === 'About'} 
-                        onClick={() => handleItemClick('About')} 
+                        active={activeItem === '/about'} 
+                        onClick={() => handleItemClick('/about')} 
                         link="/about" 
                     />
                     <NavbarItem 
                         title="Contact Me" 
-                        active={activeItem === 'Contact Me'} 
-                        onClick={() => handleItemClick('Contact Me')} 
+                        active={activeItem === '/contact'} 
+                        onClick={() => handleItemClick('/contact')} 
                         link="/contact" 
                     />
                 </div>
