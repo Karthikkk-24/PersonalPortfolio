@@ -10,15 +10,15 @@ import Social from './components/Social';
 
 function App() {
     return (
-        <div className="bg-background w-screen min-h-screen">
+        <div className="bg-black w-screen min-h-screen">
             <Router>
                 <Routes>
                     <Route path="/" element={<PublicRoute />}>
                         <Route path="/" Component={Main} />
                         <Route path="/projects" Component={Projects} />
-                        <Route path='/socials' Component={Social} />
-                        <Route path='/contact' Component={Contact} />
-                        <Route path='/about' Component={About} />
+                        <Route path="/socials" Component={Social} />
+                        <Route path="/contact" Component={Contact} />
+                        <Route path="/about" Component={About} />
                         <Route path="/shop" Component={Shop} />
                     </Route>
                 </Routes>

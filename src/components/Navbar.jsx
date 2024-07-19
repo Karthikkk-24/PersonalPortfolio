@@ -12,7 +12,7 @@ export default function Navbar() {
     };
 
     return (
-        <div className="w-96 h-screen border-b border-slate-50 flex items-center justify-between gap-5 px-3">
+        <div className="w-full h-full bg-background flex items-center justify-between gap-5 px-3 rounded-2xl">
             <div className='w-full h-full flex flex-col items-center justify-center gap-10'>
                 <div className="w-24 h-auto flex items-center justify-center">
                     <img src="/logo/1.png" className="h-auto w-full" alt="" />
