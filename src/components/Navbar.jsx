@@ -31,6 +31,12 @@ export default function Navbar() {
                         link="/projects" 
                     />
                     <NavbarItem 
+                        title="Blogs" 
+                        active={activeItem === '/blogs'} 
+                        onClick={() => handleItemClick('/blogs')} 
+                        link="/blogs" 
+                    />
+                    <NavbarItem 
                         title="Social" 
                         active={activeItem === '/socials'} 
                         onClick={() => handleItemClick('/socials')} 

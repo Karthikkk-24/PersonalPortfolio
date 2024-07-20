@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
+import Blogs from './components/Blogs';
 import Contact from './components/Contact';
 import Main from './components/Main';
 import Projects from './components/Projects';
@@ -20,6 +21,7 @@ function App() {
                         <Route path="/contact" Component={Contact} />
                         <Route path="/about" Component={About} />
                         <Route path="/shop" Component={Shop} />
+                        <Route path="/blogs" Component={Blogs} />
                     </Route>
                 </Routes>
             </Router>
