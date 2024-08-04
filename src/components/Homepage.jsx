@@ -1,7 +1,7 @@
 
 export default function Homepage() {
   return (
-    <div>
+    <div className="w-full h-full flex items-center justify-center bg-background rounded-3xl">
       dhsfouhjfd
     </div>
   )
