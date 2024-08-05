@@ -1,10 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import Homepage from './components/Homepage';
 import PublicRoute from './components/PublicRoute';
 import About from './pages/About';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
+import Homepage from './pages/Homepage';
 import Projects from './pages/Projects';
 import Shop from './pages/Shop';
 
