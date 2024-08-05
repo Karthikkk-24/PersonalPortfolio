@@ -2,6 +2,11 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Homepage from './components/Homepage';
 import PublicRoute from './components/PublicRoute';
+import About from './pages/About';
+import Blogs from './pages/Blogs';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import Shop from './pages/Shop';
 
 function App() {
     return (
@@ -10,6 +15,11 @@ function App() {
                 <Routes>
                     <Route path="/" element={<PublicRoute />}>
                         <Route path="/" element={<Homepage />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/blogs" element={<Blogs />} />
+                        <Route path="/shop" element={<Shop />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
                     </Route>
                 </Routes>
             </Router>
