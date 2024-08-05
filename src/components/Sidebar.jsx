@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
+import NavItem from './NavItem';
 
 export default function Sidebar() {
-  return (
-    <div className="w-full h-full flex flex-col items-start justify-center p-10 gap-4 bg-background rounded-2xl">
-        <Link to="/" className="w-full flex items-center justify-start text-white text-xl">Home</Link>
-        <Link to="/" className="w-full flex items-center justify-start text-white text-xl">Projects</Link>
-        <Link to="/" className="w-full flex items-center justify-start text-white text-xl">Shop</Link>
-        <Link to="/" className="w-full flex items-center justify-start text-white text-xl">About</Link>
-        <Link to="/" className="w-full flex items-center justify-start text-white text-xl">Contact</Link>
-    </div>
-  )
+    return (
+        <div className="w-full h-full flex flex-col items-start justify-center p-10 gap-4 bg-background rounded-2xl">
+            <NavItem title="Home" path={'/'} active />
+            <NavItem title="Projects" path={'/projects'} />
+            <NavItem title="Blogs" path={'/blogs'} />
+            <NavItem title="Shop" path={'/shop'} />
+            <NavItem title="About" path={'/about'} />
+            <NavItem title="Contact" path={'/contact'} />
+        </div>
+    );
 }
