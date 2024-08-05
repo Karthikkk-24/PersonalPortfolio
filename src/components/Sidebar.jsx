@@ -3,7 +3,7 @@ import NavItem from './NavItem';
 
 export default function Sidebar({ currentPath }) {
     return (
-        <div className="w-full h-full flex flex-col items-start justify-center p-10 gap-4 bg-background rounded-2xl">
+        <div className="w-full h-full flex flex-col items-start justify-center p-5 gap-4 bg-background rounded-2xl">
             <NavItem title="Home" path={'/'} active={currentPath === '/'} />
             <NavItem
                 title="Projects"
