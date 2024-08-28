@@ -2,27 +2,28 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Card({ image, title, buttonText, buttonUrl }) {
+export default function Card({ image, title, url, date, description }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <>
-            <div className="w-full rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 h-96 flex flex-col overflow-hidden">
-                <img
-                    src={image}
-                    alt={title}
-                    className="w-full h-48 object-cover cursor-pointer"
-                    onClick={() => setIsModalOpen(true)}
-                />
-                <div className="p-4 flex flex-col flex-grow">
-                    <h2 className="text-xl font-bold mb-4">{title}</h2>
-                    <Link to={buttonUrl} className="mt-auto">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors duration-300">
-                            {buttonText}
-                        </button>
-                    </Link>
+            <Link to={url} className="w-full rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-[1px] border-onyx h-auto flex flex-col overflow-hidden group cursor-pointer">
+                <div className='w-full h-72 overflow-hidden'>
+                    <img
+                        src={image}
+                        alt={title}
+                        className="w-full h-full hover:scale-105 object-cover cursor-pointer transition-all duration-300 group-hover:scale-105"
+                        onClick={() => setIsModalOpen(true)}
+                    />
                 </div>
-            </div>
+                <div className="p-4 flex h-36 flex-col flex-grow">
+                    <h5 className="text-sm text-gray-500 mb-2">{date}</h5>
+                    <h2 className="text-xl text-white group-hover:text-primary font-semibold mb-4">{title}</h2>
+                    <p className='text-sm text-gray-300'>
+                        {description}
+                    </p>
+                </div>
+            </Link>
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -33,7 +34,7 @@ export default function Card({ image, title, buttonText, buttonUrl }) {
                             className="max-w-full max-h-[90vh] object-contain"
                         />
                         <button
-                            className="absolute top-2 right-2 text-white text-2xl"
+                            className="absolute top-2 right-4 text-white text-2xl"
                             onClick={() => setIsModalOpen(false)}
                         >
                             ×
@@ -48,6 +49,7 @@ export default function Card({ image, title, buttonText, buttonUrl }) {
 Card.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired,
-    buttonUrl: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
 };
