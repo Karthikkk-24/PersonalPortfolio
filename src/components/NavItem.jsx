@@ -5,9 +5,9 @@ export default function NavItem({ title, path, active }) {
     return (
         <Link
             to={path}
-            className={`w-full h-10 pl-3 ${
-                active ? 'bg-primary font-semibold rounded-lg text-background' : 'text-white'
-            } flex items-center justify-start text-xl`}
+            className={`w-full h-10 ${
+                active ? 'text-primary font-semibold rounded-lg' : 'text-white'
+            } flex items-center justify-center text-base`}
         >
             {title}
         </Link>

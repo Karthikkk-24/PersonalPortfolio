@@ -1,12 +1,9 @@
-import NameCard from '../components/NameCard';
-import Navbar from '../components/Navbar';
-import Space from '../components/Space';
+import ProfessionalSummary from '../components/ProfessionalSummary';
 
 export default function Homepage() {
     return (
         <div className="w-full h-full">
-            <NameCard />
-            <Space />
+            <ProfessionalSummary />
         </div>
     );
 }
