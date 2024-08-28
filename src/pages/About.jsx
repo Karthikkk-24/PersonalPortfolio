@@ -15,7 +15,11 @@ const ExperienceItem = ({ title, period, description }) => (
     <div className="mb-4">
         <h3 className="text-lg font-semibold text-white">{title}</h3>
         <p className="text-primary">{period}</p>
-        <p className="text-gray-400 mt-1">{description}</p>
+        <p className="text-gray-400 mt-1">
+            {description.map((point, index) => (
+                <li key={index}>{point}</li>
+            ))}
+        </p>
     </div>
 );
 
@@ -30,12 +34,22 @@ export default function About() {
                     <ExperienceItem
                         title="RudraTech IT Services"
                         period="Nov 2022 — Aug 2024"
-                        description="Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur."
+                        description={[
+                            'Delivered over 10 projects with 95% client satisfaction rate across diverse industries, demonstrating strong client communication skills.',
+                            'Built Java and Node.js backend systems serving 10,000+ concurrent users, improving performance by 40%.',
+                            'Reduced API response time by 60% through code optimization and caching strategies, showcasing problem-solving abilities.',
+                            'Led 20+ code reviews, identifying and resolving 150+ potential issues pre-deployment, exhibiting leadership and attention to detail.',
+                        ]}
                     />
                     <ExperienceItem
                         title="NEXA Software"
                         period="Feb 2022 — Aug 2022"
-                        description="Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
+                        description={[
+                            'Created Node.js backend for customer feedback, increasing user submissions by 35% in 3 months.',
+                            'Redesigned 5 key user interfaces with React.js, improving task completion rates by 40%, demonstrating user-centric design thinking.',
+                            'Contributed to 4 cross-team projects, all delivered within 5% of estimated timelines, showcasing adaptability and time management skills.',
+                            'Implemented Git workflow, reducing merge conflicts by 70% and speeding up releases by 2 days on average, highlighting process improvement capabilities.',
+                        ]}
                     />
                 </div>
                 <div className="mb-8">
@@ -75,5 +89,5 @@ EducationItem.propTypes = {
 ExperienceItem.propTypes = {
     title: PropTypes.string.isRequired,
     period: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.array.isRequired,
 };
