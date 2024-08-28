@@ -29,7 +29,7 @@ export default function Navbar({ currentPath }) {
                         {generatePathName(currentPath)}
                     </span>
                 </h2>
-                <div className="w-1/3 h-1 bg-primary"></div>
+                <div className="w-16 h-1 rounded-md mt-2 bg-primary"></div>
             </div>
             <div className="w-[60%] h-20 flex items-center justify-evenly p-5 gap-4 bg-background border-[1px] border-slate-800 absolute top-0 right-0 rounded-bl-2xl">
                 <NavItem title="Home" path={'/'} active={currentPath === '/'} />
