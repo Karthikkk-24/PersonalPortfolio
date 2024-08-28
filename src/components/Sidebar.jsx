@@ -1,39 +1,8 @@
-import PropTypes from 'prop-types';
-import NavItem from './NavItem';
 
-export default function Sidebar({ currentPath }) {
+export default function Sidebar() {
     return (
-        <div className="w-full h-full flex flex-col items-start justify-center p-5 gap-4 bg-background rounded-2xl">
-            <NavItem title="Home" path={'/'} active={currentPath === '/'} />
-            <NavItem
-                title="Projects"
-                path={'/projects'}
-                active={currentPath === '/projects'}
-            />
-            <NavItem
-                title="Blogs"
-                path={'/blogs'}
-                active={currentPath === '/blogs'}
-            />
-            <NavItem
-                title="Shop"
-                path={'/shop'}
-                active={currentPath === '/shop'}
-            />
-            <NavItem
-                title="About"
-                path={'/about'}
-                active={currentPath === '/about'}
-            />
-            <NavItem
-                title="Contact"
-                path={'/contact'}
-                active={currentPath === '/contact'}
-            />
+        <div className="w-full h-full flex flex-col items-start justify-center p-5 gap-4 bg-background rounded-2xl border-[1px] border-slate-800">
+            
         </div>
     );
 }
-
-Sidebar.propTypes = {
-    currentPath: PropTypes.string.isRequired,
-};

@@ -4,7 +4,7 @@ import Space from '../components/Space';
 
 export default function Homepage() {
     return (
-        <div className="w-full h-full flex flex-col items-center justify-start bg-background rounded-3xl p-10">
+        <div className="w-full h-full flex flex-col items-center justify-start bg-background rounded-3xl p-10 border-[1px] border-slate-800">
             <Navbar />
             <NameCard />
             <Space />
