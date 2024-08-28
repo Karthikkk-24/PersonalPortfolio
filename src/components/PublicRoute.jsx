@@ -8,10 +8,10 @@ const PublicRoute = () => {
         <div className="w-full h-screen flex flex-col items-center justify-center">
             <div className="container h-full">
                 <div className="w-full h-full flex items-start justify-start py-16">
-                    <div className="w-96 h-full flex flex-col items-start justify-start p-6">
+                    <div className="w-96 h-full flex flex-col items-start justify-start p-2">
                         <Sidebar currentPath={location.pathname} />
                     </div>
-                    <div className="w-full h-full flex flex-col items-start justify-start p-6">
+                    <div className="w-full h-full flex flex-col items-start justify-start p-2">
                         <Outlet />
                     </div>
                 </div>
