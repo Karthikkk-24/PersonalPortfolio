@@ -31,7 +31,7 @@ export default function Navbar({ currentPath }) {
                 </h2>
                 <div className="w-16 h-1 rounded-md mt-2 bg-primary"></div>
             </div>
-            <div className="w-[60%] h-20 flex items-center justify-evenly p-5 gap-4 bg-background border-[1px] border-slate-800 absolute top-0 right-0 rounded-bl-2xl">
+            <div className="w-[60%] h-20 flex items-center justify-evenly p-5 gap-4 bg-background border-[1px] border-slate-800 absolute md:top-0 right-0 rounded-bl-2xl max-md:fixed max-md:bottom-0 max-md:w-full max-md:z-50">
                 <NavItem title="Home" path={'/'} active={currentPath === '/'} />
                 <NavItem
                     title="Projects"
