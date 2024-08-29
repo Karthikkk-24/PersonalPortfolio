@@ -9,8 +9,8 @@ export default function Blogs() {
     }, []);
 
     return (
-        <div className="w-full h-full overflow-y-auto px-7 py-5">
-            <div className="w-full h-auto grid grid-cols-3 place-items-center justify-items-center gap-10">
+        <div className="w-full h-full overflow-y-auto px-7 py-5 max-md:px-1">
+            <div className="w-full h-auto grid grid-cols-3 place-items-center justify-items-center gap-10 max-md:grid-cols-1">
                 {[
                     {
                         image: '/logo/1.png',
