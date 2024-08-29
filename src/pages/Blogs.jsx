@@ -85,7 +85,7 @@ export default function Blogs() {
                 ].map((project, index) => (
                     <div
                         key={index}
-                        className={`transform transition-all duration-500 ease-out ${
+                        className={`transform transition-all duration-500 ease-out w-full ${
                             isVisible
                                 ? 'scale-100 opacity-100'
                                 : 'scale-0 opacity-0'
