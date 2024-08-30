@@ -25,7 +25,7 @@ const ExperienceItem = ({ title, period, description }) => (
 
 export default function About() {
     return (
-        <div className="w-full h-full overflow-y-auto text-white p-8">
+        <div className="w-full h-full overflow-y-auto text-white p-8 max-md:p-1">
             <div className="w-full mx-auto">
                 <div>
                     <h2 className="text-2xl font-bold mb-4 flex items-center">

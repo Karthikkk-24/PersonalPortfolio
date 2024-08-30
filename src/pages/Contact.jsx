@@ -7,7 +7,7 @@ export default function Contact() {
 
             </div>
             <h1 className="text-3xl text-white">Contact Form</h1>
-            <div className="w-full h-auto grid grid-cols-2 gap-6">
+            <div className="w-full h-auto grid grid-cols-2 gap-6 max-md:grid-cols-1">
                 <FormInput title="Name" type="text" />
                 <FormInput title="Email" type="email" />
                 <FormInput title="Phone" type="tel" />
