@@ -10,6 +10,7 @@ import {
     FaYoutube,
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { SiLeetcode } from 'react-icons/si';
 import SocialInfo from './SocialInfo';
 
 const SocialDropdown = ({ isOpen, toggle }) => {
@@ -94,7 +95,7 @@ export default function Sidebar() {
             <p className="bg-onyx rounded-lg px-4 py-2 text-slate-200">
                 Software Engineer
             </p>
-            <div className="w-[80%] h-[1px] bg-onyx my-4"></div>
+            <div className="w-[80%] bg-slate-600 h-[1px]"></div>
             <div className="w-[90%] h-auto">
                 <div className="hidden md:flex md:flex-col md:items-start md:justify-start md:gap-5">
                     <SocialInfo
@@ -106,6 +107,11 @@ export default function Sidebar() {
                         icon={<FaLinkedin />}
                         url="https://www.linkedin.com/in/kks24/"
                         title="LinkedIn"
+                    />
+                    <SocialInfo
+                        icon={<SiLeetcode />}
+                        url="https://leetcode.com/u/kkshettigar24/"
+                        title="LeetCode"
                     />
                     <SocialInfo
                         icon={<FaXTwitter />}

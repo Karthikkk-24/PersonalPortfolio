@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function SocialInfo({ icon, url, title }) {
     return (
-        <Link to={url} className="w-full h-12 grid grid-cols-4 gap-8 max-md:mt-4">
+        <Link to={url} className="w-full h-10 grid grid-cols-4 gap-8 max-md:mt-4">
             <div className="col-span-1 bg-onyx h-full w-12 flex items-center justify-center aspect-square rounded-xl text-primary text-xl neo-shadow">
                 {icon}
             </div>
