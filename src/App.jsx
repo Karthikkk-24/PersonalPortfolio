@@ -10,7 +10,7 @@ import Shop from './pages/Shop';
 
 function App() {
     return (
-        <div className="bg-black w-screen min-h-screen">
+        <div className="bg-black w-screen min-h-screen custom-background">
             <Router>
                 <Routes>
                     <Route path="/" element={<PublicRoute />}>
