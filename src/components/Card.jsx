@@ -8,7 +8,7 @@ export default function Card({ image, title, url, date, description }) {
     return (
         <>
             <Link to={url} className="w-full rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-[1px] border-onyx h-auto flex flex-col overflow-hidden group cursor-pointer">
-                <div className='w-full h-72 overflow-hidden'>
+                <div className='w-full h-80 overflow-hidden'>
                     <img
                         src={image}
                         alt={title}
