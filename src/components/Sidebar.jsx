@@ -36,6 +36,11 @@ const SocialDropdown = ({ isOpen, toggle }) => {
             title: 'Instagram',
         },
         {
+            icon: <SiLeetcode />,
+            url: 'https://leetcode.com/u/kkshettigar24/',
+            title: 'LeetCode',
+        },
+        {
             icon: <FaMedium />,
             url: 'https://medium.com/@karthikkk',
             title: 'Medium',
