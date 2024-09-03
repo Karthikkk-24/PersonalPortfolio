@@ -8,7 +8,7 @@ export default function Blogs() {
         setIsVisible(true);
     }, []);
 
-    const projects = [
+    const blogs = [
         {
             image: '/blogs/1.png',
             url: '/some-page',
@@ -448,7 +448,7 @@ export default function Blogs() {
     return (
         <div className="w-full h-full overflow-y-auto px-7 py-5 max-md:px-1">
             <div className="w-full h-auto grid grid-cols-3 place-items-center justify-items-center gap-10 max-md:grid-cols-1">
-                {projects.reverse().map((project, index) => (
+                {blogs.reverse().map((project, index) => (
                     <div
                         key={index}
                         className={`transform transition-all duration-500 ease-out w-full ${
