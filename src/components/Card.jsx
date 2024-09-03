@@ -19,7 +19,7 @@ export default function Card({ image, title, url, date, description }) {
                 <div className="p-4 flex h-36 flex-col flex-grow">
                     <h5 className="text-sm text-gray-500 mb-2">{date}</h5>
                     <h2 className="text-xl text-white group-hover:text-primary font-semibold mb-4">{title}</h2>
-                    <p className='text-sm text-gray-300'>
+                    <p className='text-sm text-gray-300 hidden'>
                         {description}
                     </p>
                 </div>
