@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
-export default function ProductCard({ image, title, url, date, description, github }) {
+export default function ProductCard({ image = '', title = '', url = '', date = '', description = '', github = '' }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     function goToGitHub(event, url) {

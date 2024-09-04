@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-export default function Card({ image, title, url, date, description }) {
+export default function Card({ image = '', title = '', url = '', date = '', description = '' }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
