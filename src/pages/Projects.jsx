@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Card from '../components/Card';
+import ProductCard from '../components/ProductCard';
 
 export default function Blogs() {
     const [isVisible, setIsVisible] = useState(false);
@@ -458,7 +458,7 @@ export default function Blogs() {
                         }`}
                         style={{ transitionDelay: `${index * 100}ms` }}
                     >
-                        <Card
+                        <ProductCard
                             image={project.image}
                             title={project.title}
                             date={project.date}
