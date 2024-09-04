@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Card({ image, title, url, date, description }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <>
-            <Link to={url} className="w-full rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-[1px] border-onyx h-auto flex flex-col overflow-hidden group cursor-pointer">
+            <a href={url} className="w-full rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-[1px] border-onyx h-auto flex flex-col overflow-hidden group cursor-pointer">
                 <div className='w-full h-80 overflow-hidden'>
                     <img
                         src={image}
@@ -23,7 +22,7 @@ export default function Card({ image, title, url, date, description }) {
                         {description}
                     </p>
                 </div>
-            </Link>
+            </a>
 
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
