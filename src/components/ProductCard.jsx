@@ -3,10 +3,17 @@ import { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
-export default function ProductCard({ image = '', title = '', url = '', date = '', description = '', github = '' }) {
+export default function ProductCard({
+    image = '',
+    title = '',
+    url = '',
+    date = '',
+    description = '',
+    project_link = '',
+}) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    function goToGitHub(event, url) {
+    function goToProject(event, url) {
         window.location.href = url;
     }
 
@@ -25,7 +32,7 @@ export default function ProductCard({ image = '', title = '', url = '', date = '
                         onClick={() => setIsModalOpen(true)}
                     />
                 </div>
-                <div className="p-4 flex h-36 flex-col flex-grow">
+                <div className="p-4 flex h-36 flex-col flex-grow relative">
                     <h5 className="text-sm text-gray-500 mb-2">{date}</h5>
                     <h2 className="text-xl text-white group-hover:text-primary font-semibold mb-4">
                         {title}
@@ -34,13 +41,17 @@ export default function ProductCard({ image = '', title = '', url = '', date = '
                         {description}
                     </p>
                     <div className="flex items-center justify-between">
-                        <button className="w-auto h-10 bg-primary font-semibold flex gap-2 items-center justify-start px-5 text-background rounded-lg">
-                            View <FaArrowRightLong />
-                        </button>
-                        <button
-                            className="w-auto px-4 h-10 bg-primary font-semibold text-xl text-background rounded-lg"
-                            onClick={(event) => goToGitHub(event, github)}
-                        >
+                        {
+                            project_link && (
+                                <button
+                                    className="w-auto px-4 h-10 bg-primary font-semibold text-xl text-background rounded-lg"
+                                    onClick={(event) => goToProject(event, project_link)}
+                                >
+                                    <FaArrowRightLong />
+                                </button>
+                            )
+                        }
+                        <button className="w-auto px-4 h-10 bg-primary font-semibold text-xl text-background rounded-lg absolute right-4 bottom-4">
                             <FaGithub />
                         </button>
                     </div>
@@ -72,7 +83,7 @@ ProductCard.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    github: PropTypes.string.isRequired,
+    project_link: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
 };
