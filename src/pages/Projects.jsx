@@ -8,8 +8,7 @@ export default function Blogs() {
         setIsVisible(true);
     }, []);
     
-    // Changes have to be done to project 
-    
+
     const projects = [
         {
             image: '/blogs/1.png',
