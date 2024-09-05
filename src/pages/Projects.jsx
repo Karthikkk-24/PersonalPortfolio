@@ -7,7 +7,9 @@ export default function Blogs() {
     useEffect(() => {
         setIsVisible(true);
     }, []);
-
+    
+    // Changes have to be done to project 
+    
     const projects = [
         {
             image: '/blogs/1.png',
