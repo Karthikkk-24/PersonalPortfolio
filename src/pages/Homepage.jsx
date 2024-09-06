@@ -31,7 +31,6 @@ export default function Homepage() {
             </button>
             <WhatIDo />
             <RecentBlogs />
-            <CallToAction />
         </div>
     );
 }

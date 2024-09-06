@@ -1,63 +1,74 @@
-
-import MiniCard from "./MiniCard";
+import MiniCard from './MiniCard';
 // import '/assets/styles/owl.carousel.min.css';
 // import '/assets/styles/owl.theme.default.min.css';
 
 export default function RecentBlogs() {
     const blogs = [
         {
-            image: '/blogs/1.png',
-            url: 'https://medium.com/@karthikkk/introduction-to-python-774694f5855d',
+            image: '/blogs/57.png',
+            url: 'https://medium.com/@karthikkk/mastering-arrays-mastering-javascript-part-10-fba7287aa48d',
             description: 'Card Description',
-            title: 'Introduction to Python',
-            date: 'Apr 12, 2022',
+            title: 'Mastering Arrays',
+            date: 'Mar 10, 2024',
         },
         {
-            image: '/blogs/2.png',
-            url: 'https://medium.com/@karthikkk/features-of-object-orient-programming-oops-7f0856d908f8',
+            image: '/blogs/58.png',
+            url: 'https://medium.com/@karthikkk/mastering-linked-lists-mastering-javascript-part-11-c00283b7c5a0',
             description: 'Card Description',
-            title: 'Features of OOPs',
-            date: 'Apr 15, 2022',
+            title: 'Mastering Linked Lists',
+            date: 'Mar 31, 2024',
         },
         {
-            image: '/blogs/3.png',
-            url: 'https://medium.com/@karthikkk/the-python-series-2-variable-declaration-logical-statements-c818536f6ce9',
+            image: '/blogs/59.png',
+            url: 'https://medium.com/@karthikkk/mastering-stacks-mastering-javascript-part-12-937c970c0814',
             description: 'Card Description',
-            title: 'Variable Declaration & Logical Statements',
-            date: 'Apr 18, 2022',
+            title: 'Mastering Stacks',
+            date: 'Apr 28, 2024',
         },
-        // {
-        //     image: '/blogs/4.png',
-        //     url: 'https://medium.com/@karthikkk/the-python-series-3-switch-case-and-looping-statements-40bbe114e5f5',
-        //     description: 'Card Description',
-        //     title: 'Switch Case & Looping Statements',
-        //     date: 'Apr 20, 2022',
-        // },
-        // {
-        //     image: '/blogs/5.png',
-        //     url: 'https://medium.com/@karthikkk/the-python-series-4-while-loop-and-general-terminologies-7e3c87d05e91',
-        //     description: 'Card Description',
-        //     title: 'While Loop & General Terminologies',
-        //     date: 'May 13, 2022',
-        // },
+        {
+            image: '/blogs/60.png',
+            url: 'https://medium.com/@karthikkk/mastering-hash-tables-mastering-javascript-part-13-244105fd21fc',
+            description: 'Card Description',
+            title: 'Mastering Hash Tables',
+            date: 'May 21, 2024',
+        },
+        {
+            image: '/blogs/61.png',
+            url: 'https://medium.com/@karthikkk/mastering-trees-mastering-javascript-part-14-c344fb5101d0',
+            description: 'Card Description',
+            title: 'Mastering Trees',
+            date: 'Jun 16, 2024',
+        },
+        {
+            image: '/blogs/62.png',
+            url: 'https://medium.com/@karthikkk/mastering-graphs-mastering-javascript-part-15-0d4bac18497b',
+            description: 'Card Description',
+            title: 'Mastering Graphs',
+            date: 'Aug 29, 2024',
+        },
     ];
 
     return (
-        <div className="w-full h-auto grid grid-cols-3 place-items-center justify-items-center gap-10 max-md:grid-cols-1">
-            {blogs.reverse().map((project, index) => (
-                <div
-                    key={index}
-                    className="transform transition-all duration-500 ease-out w-full"
-                >
-                    <MiniCard
-                        image={project.image}
-                        title={project.title}
-                        date={project.date}
-                        url={project.url}
-                        description={project.description}
-                    />
-                </div>
-            ))}
+        <div className='w-full h-auto flex flex-col items-center justify-center gap-7'>
+            <h3 className='text-3xl text-white w-full text-left'>
+                Recent Blogs
+            </h3>
+            <div className="w-full h-auto grid grid-cols-3 gap-10 pb-10 px-5">
+                {blogs.reverse().map((project, index) => (
+                    <div
+                        key={index}
+                        className="transform transition-all duration-500 ease-out w-full h-auto"
+                    >
+                        <MiniCard
+                            image={project.image}
+                            title={project.title}
+                            date={project.date}
+                            url={project.url}
+                            description={project.description}
+                        />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
