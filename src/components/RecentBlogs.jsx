@@ -53,7 +53,7 @@ export default function RecentBlogs() {
             <h3 className='text-3xl text-white w-full text-left'>
                 Recent Blogs
             </h3>
-            <div className="w-full h-auto grid grid-cols-3 gap-10 pb-10 px-5">
+            <div className="w-full h-auto grid grid-cols-3 gap-10 pb-10 px-5 max-md:grid-cols-1 max-md:px-0">
                 {blogs.reverse().map((project, index) => (
                     <div
                         key={index}

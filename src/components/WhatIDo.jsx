@@ -2,7 +2,7 @@ import BoxItem from "./BoxItem";
 
 export default function WhatIDo() {
     return (
-        <div className="w-full grid h-auto grid-cols-2 gap-10">
+        <div className="w-full grid h-auto grid-cols-2 gap-10 max-md:grid-cols-1 max-md:gap-3">
             <BoxItem icon="/icons/frontend.svg" title="Front End Development" />
             <BoxItem icon="/icons/backend.svg" title="Backend End Development" />
             <BoxItem icon="/icons/web-design.svg" title="Web Design" />
