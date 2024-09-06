@@ -9,13 +9,12 @@ export default function ProfessionalSummary() {
                 solutions and staying updated with the latest web technologies.
             </p>
             <p className="text-white text-base">
-                Proficient in both frontend and backend development, with a
-                strong focus on optimizing performance and enhancing user
-                experience. Experienced in working with cross-functional teams,
-                managing complex projects, and delivering high-quality code
-                under tight deadlines. Adept at problem-solving and continuously
-                improving applications through testing, debugging, and
-                integrating new features.
+                Proficient in full-stack development, with a focus on
+                performance optimization and improving user interaction.
+                Experienced in collaborating with teams to deliver
+                well-structured, maintainable code within project timelines.
+                Skilled in troubleshooting, refining features, and adhering to
+                best practices in software development.
             </p>
         </div>
     );
