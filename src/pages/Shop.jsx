@@ -10,7 +10,12 @@ export default function Shop() {
 
     return (
         <div className="w-full h-full overflow-y-auto px-7 py-5 max-md:px-1">
-            <div className="w-full h-auto grid grid-cols-3 place-items-center justify-items-center gap-10 max-md:grid-cols-1">
+            <div className='w-full h-full flex items-center justify-center'>
+                <h2 className='text-5xl mb-10 text-white uppercase max-md:text-2xl max-md:mb-0'>
+                    Coming Soon...
+                </h2>
+            </div>
+            <div className="w-full h-auto grid-cols-3 place-items-center justify-items-center gap-10 max-md:grid-cols-1 hidden">
                 {[
                     {
                         image: '/logo/1.png',
