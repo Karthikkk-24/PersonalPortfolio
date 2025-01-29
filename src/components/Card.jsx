@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-export default function Card({ image = '', title = '', url = '', date = '', description = '' }) {
+export default function Card({ image = '', title = '', url = '', date = '', description = '', height = 36, textAlign = '' }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
@@ -15,9 +15,9 @@ export default function Card({ image = '', title = '', url = '', date = '', desc
                         onClick={() => setIsModalOpen(true)}
                     />
                 </div>
-                <div className="p-4 flex h-36 flex-col flex-grow">
+                <div className={`p-4 flex h-${height} flex-col flex-grow`}>
                     <h5 className="text-sm text-gray-500 mb-2">{date}</h5>
-                    <h2 className="text-xl text-white group-hover:text-primary font-semibold mb-4">{title}</h2>
+                    <h2 className={`text-xl text-white group-hover:text-primary font-semibold mb-4 ${textAlign}`}>{title}</h2>
                     <p className='text-sm text-gray-300 hidden'>
                         {description}
                     </p>
@@ -51,4 +51,6 @@ Card.propTypes = {
     url: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    height: PropTypes.number,
+    textAlign: PropTypes.string,
 };
